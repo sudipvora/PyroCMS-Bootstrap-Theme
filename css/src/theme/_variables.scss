@@ -1,0 +1,16 @@
+// Set the primary brand colour (logo pink).
+$brand-primary: #e56374;
+
+// Recolour the primary navigation.
+$navbar-default-color: #FFFFFF;
+$navbar-default-bg: #000000;
+$navbar-default-link-color: #FFFFFF;
+$navbar-default-link-hover-color: $brand-primary;
+$navbar-default-link-active-color: $brand-primary;
+$navbar-default-link-active-bg: lighten($navbar-default-bg, 6.5%) !default;
+$navbar-default-brand-color: $brand-primary;
+$navbar-default-brand-hover-color: #FFFFFF;
+
+// Recolour links.
+$link-color: $brand-primary;
+$link-hover-color: #000000;
