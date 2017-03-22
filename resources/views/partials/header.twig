@@ -1,11 +1,15 @@
 <nav class="navbar navbar-default">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle collapsed navbar-text"  data-toggle="collapse" data-target="#NavPrimaryLinks">Menu</button>
-		<a class="navbar-brand" href="/">{{ settings:site_name }}</a>
+		<a class="navbar-brand" href="/">{{ config_get("streams::distribution.name") }}</a>
 	</div>
 	<div class="collapse navbar-collapse" id="NavPrimaryLinks">
 		<ul class="nav navbar-nav">
-			{{ navigation:links group="header" }}
+            {% for link in links('header').get() %}
+                <li>
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+            {% endfor %}
 		</ul>
 	</div>
 </nav>

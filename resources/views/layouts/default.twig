@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block metadata deferred %}
+    {% include "theme::partials/metadata" %}
+    {% endblock %}
+</head>
+<body>
+	<div id="Main" class="container-fluid">
+		<header>
+            {% include "theme::partials/header" %}
+		</header>
+		<article>
+            {% block content %}{% endblock %}
+		</article>
+		<footer>
+            {% include "theme::partials/footer" %}
+        </footer>
+	</div>
+</body>
+</html>
