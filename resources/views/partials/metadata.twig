@@ -1,0 +1,13 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>{{ config_get("streams::distribution.name") }}  - {{ trans(template.meta_title) }}</title>
+
+{# Add theme assets. #}
+{{ asset_style("theme::/css/theme.css") }}
+{{ asset_script("theme::/js/jquery.js") }}
+{{ asset_script("theme::/js/bootstrap.js") }}
+
+{# Include Styles Loaded From Outside #}
+{% for style in asset_styles("styles.css") %}
+    {{ style|raw }}
+{% endfor %}
